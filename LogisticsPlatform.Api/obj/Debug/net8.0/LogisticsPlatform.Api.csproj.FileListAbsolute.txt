@@ -111,3 +111,14 @@ C:\Users\Lizzi\source\repos\LogisticsPlatform.Api\LogisticsPlatform.Api\obj\Debu
 C:\Users\Lizzi\source\repos\LogisticsPlatform.Api\LogisticsPlatform.Api\obj\Debug\net8.0\LogisticsPlatform.Api.pdb
 C:\Users\Lizzi\source\repos\LogisticsPlatform.Api\LogisticsPlatform.Api\obj\Debug\net8.0\LogisticsPlatform.Api.genruntimeconfig.cache
 C:\Users\Lizzi\source\repos\LogisticsPlatform.Api\LogisticsPlatform.Api\obj\Debug\net8.0\ref\LogisticsPlatform.Api.dll
+C:\Users\Lizzi\source\repos\LogisticsPlatform.Api\LogisticsPlatform.Api\bin\Debug\net8.0\BCrypt-Net-Next.dll
+C:\Users\Lizzi\source\repos\LogisticsPlatform.Api\LogisticsPlatform.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Lizzi\source\repos\LogisticsPlatform.Api\LogisticsPlatform.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Lizzi\source\repos\LogisticsPlatform.Api\LogisticsPlatform.Api\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Lizzi\source\repos\LogisticsPlatform.Api\LogisticsPlatform.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Lizzi\source\repos\LogisticsPlatform.Api\LogisticsPlatform.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Lizzi\source\repos\LogisticsPlatform.Api\LogisticsPlatform.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Lizzi\source\repos\LogisticsPlatform.Api\LogisticsPlatform.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Lizzi\source\repos\LogisticsPlatform.Api\LogisticsPlatform.Api\bin\Debug\net8.0\BouncyCastle.Crypto.dll
+C:\Users\Lizzi\source\repos\LogisticsPlatform.Api\LogisticsPlatform.Api\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Lizzi\source\repos\LogisticsPlatform.Api\LogisticsPlatform.Api\obj\Debug\net8.0\LogisticsPlatform.Api.sourcelink.json
