@@ -21,7 +21,6 @@ namespace LogisticsPlatform.Api.Controllers
         {
             try
             {
-                // ვქაჩავთ მარშრუტებს და ვარქმევთ სახელს ისე, რომ ფრონტენდმა იდეალურად წაიკითხოს
                 var routes = await _context.Routes
                     .Where(r => r.Status == "Active")
                     .Select(r => new
