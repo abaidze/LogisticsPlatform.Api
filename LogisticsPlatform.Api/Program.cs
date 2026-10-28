@@ -66,8 +66,22 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:3000") // უშვებს მხოლოდ ჩვენს ფრონტენდს
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
 var app = builder.Build();
+
+app.UseCors("AllowFrontend");
+
+app.UseAuthorization();
+app.MapControllers();
 
 if (app.Environment.IsDevelopment())
 {
@@ -77,9 +91,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// 4. Important Order: Authentication FIRST, then Authorization!
-app.UseAuthentication();
-app.UseAuthorization();
 
 app.MapControllers();
 

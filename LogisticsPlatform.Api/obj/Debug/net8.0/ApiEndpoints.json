@@ -40,5 +40,15 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticsPlatform.Api.Controllers.RoutesController",
+    "Method": "GetRoutes",
+    "RelativePath": "api/Routes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]
