@@ -59,7 +59,6 @@ namespace LogisticsPlatform.Api.Controllers
                 return BadRequest(new { message = "არასწორი დაჯავშნის მონაცემები." });
             }
 
-            // შევამოწმოთ არსებობს თუ არა მარშრუტი
             var route = await _context.Routes.FindAsync(request.RouteId);
             if (route == null)
             {
