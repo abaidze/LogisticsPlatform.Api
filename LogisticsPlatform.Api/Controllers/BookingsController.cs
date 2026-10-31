@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using LogisticsPlatform.Api.Data; 
+using LogisticsPlatform.Api.Data;
 using LogisticsPlatform.Api.Models;
 
 namespace LogisticsPlatform.Api.Controllers
@@ -23,6 +23,31 @@ namespace LogisticsPlatform.Api.Controllers
             public string GuestName { get; set; } = string.Empty;
             public int SeatsBooked { get; set; }
             public decimal TotalAmount { get; set; }
+        }
+
+        // GET: api/Bookings
+        // აბრუნებს ყველა დაჯავშნილ შეკვეთას ზუსტი მოდელის ველების გამოყენებით
+        [HttpGet]
+        public async Task<IActionResult> GetBookings()
+        {
+            var bookings = await _context.Bookings
+                .Include(b => b.Route) // ვუერთებთ Route ცხრილს
+                .OrderByDescending(b => b.BookedAt)
+                .Select(b => new
+                {
+                    id = b.Id,
+                    bookingReference = b.BookingReference,
+                    guestName = b.GuestName,
+                    fromCity = b.Route != null ? b.Route.Origin : "უცნობია",         // Origin
+                    toCity = b.Route != null ? b.Route.Destination : "უცნობია",     // Destination
+                    seatsBooked = b.SeatsBooked,
+                    totalAmount = b.TotalAmount,
+                    status = "აქტიური",
+                    date = b.Route != null ? b.Route.DepartureTime.ToString("yyyy-MM-dd") : b.BookedAt.ToString("yyyy-MM-dd") // DepartureTime
+                })
+                .ToListAsync();
+
+            return Ok(bookings);
         }
 
         // POST: api/Bookings
@@ -53,7 +78,7 @@ namespace LogisticsPlatform.Api.Controllers
             // შევქმნათ ახალი ბუქინგი
             var booking = new Booking
             {
-                BookingReference = "BK-" + new Random().Next(1000, 9999), // გენერირდება უნიკალური რეფერენსი
+                BookingReference = "BK-" + new Random().Next(1000, 9999),
                 RouteId = request.RouteId,
                 GuestName = request.GuestName,
                 SeatsBooked = request.SeatsBooked,

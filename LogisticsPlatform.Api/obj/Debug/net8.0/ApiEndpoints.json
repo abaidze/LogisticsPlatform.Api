@@ -43,6 +43,16 @@
   },
   {
     "ContainingType": "LogisticsPlatform.Api.Controllers.BookingsController",
+    "Method": "GetBookings",
+    "RelativePath": "api/Bookings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticsPlatform.Api.Controllers.BookingsController",
     "Method": "CreateBooking",
     "RelativePath": "api/Bookings",
     "HttpMethod": "POST",
@@ -65,6 +75,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticsPlatform.Api.Controllers.RoutesController",
+    "Method": "CreateRoute",
+    "RelativePath": "api/Routes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "LogisticsPlatform.Api.Controllers.RoutesController\u002BCreateRouteDto",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

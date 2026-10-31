@@ -80,6 +80,16 @@
       }
     },
     "/api/Bookings": {
+      "get": {
+        "tags": [
+          "Bookings"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "post": {
         "tags": [
           "Bookings"
@@ -120,6 +130,35 @@
             "description": "OK"
           }
         }
+      },
+      "post": {
+        "tags": [
+          "Routes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRouteDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRouteDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRouteDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     }
   },
@@ -143,6 +182,36 @@
           "totalAmount": {
             "type": "number",
             "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateRouteDto": {
+        "type": "object",
+        "properties": {
+          "fromCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "toCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "availableSeats": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "driverName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
